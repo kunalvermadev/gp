@@ -1,9 +1,5 @@
 var c = 0;
 var t = []
-function hove(e) {
-    var u = 'url(XX)'.replace('XX', e.src);
-    document.getElementById("bgg").style.background = u;
-}
 window.onload = function () {
     foo();
     window.addEventListener("scroll", (e) => {
@@ -16,7 +12,7 @@ window.onload = function () {
 }
 
 function foo() {
-    return new Promise((v) => {
+    return new Promise((_v) => {
         t = Array.apply(null, {
             length: 15
         }).map(Number.call, (a) => {
@@ -30,11 +26,14 @@ function foo() {
         t.forEach((v, i) => {
             setTimeout(() => {
                 document.querySelector(".flex_card").append(v.el);
+
             }
-                , 500 + (i * 200));
+                , 500 + (i * 100));
+            _v(88);
+
         }
+
         );
-        v(88);
 
     }
     ).then((_c) => {
@@ -42,8 +41,7 @@ function foo() {
             setTimeout(() => {
                 v.el.querySelector("img").src = v.i;
             }
-                , 500 + (i * 400));
-
+                , 500 + (i * 200));
             t = [];
         }
         );
