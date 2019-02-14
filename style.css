@@ -60,6 +60,7 @@ html, body {
     font-size: 14px;
     font-weight: 600;
     user-select: none;
+    height: 103vh;
 }
 
 .logo svg {
